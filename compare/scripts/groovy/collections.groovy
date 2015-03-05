@@ -5,6 +5,7 @@ assert list.size == 4
 assert list.size() == 4
 assert list.class == ArrayList
 
+//Range
 assert 5..8 == [5,6,7,8]
 assert 5..<8 == [5, 6, 7]
 

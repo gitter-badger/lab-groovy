@@ -20,7 +20,6 @@ class GSortStrings {
         //Ordenação decrescente pelo tamannho da string
         strings.sort { -it.size() }
         println "Desc. $strings"
-
     }
 
 }

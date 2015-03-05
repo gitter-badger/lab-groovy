@@ -1,7 +1,8 @@
 package lab
 
 /**
- * Created by joao on 11/02/15.
+ * Ordenador de Strings Groovy
+ * @author joao
  */
 class GStringSorter {
 
@@ -10,8 +11,7 @@ class GStringSorter {
     }
 
     List<String> sortByDescLength(List<String> strings) {
-        Collections.sort(strings, {s1,s2 -> s2.size() - s1.size()} as Comparator)
-        strings
+        strings.sort { -it.length() }
     }
 
     List<String> sortByAscLength(List<String> strings) {

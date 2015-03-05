@@ -5,7 +5,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Created by joao on 11/02/15.
+ * Ordenador de Strings Java
+ * @author joao
  */
 public class JStringSorter {
 

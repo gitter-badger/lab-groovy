@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by joao on 11/02/15.
+ * Ordenar Strings
+ * @author joao
  */
 public class JSortStrings {
 
@@ -23,8 +24,4 @@ public class JSortStrings {
 
         System.out.println(strings);
     }
-
-
-
-
 }
