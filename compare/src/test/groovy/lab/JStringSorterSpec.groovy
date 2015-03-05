@@ -10,11 +10,14 @@ class JStringSorterSpec extends Specification {
         given:
         def sorter = new JStringSorter()
 
-        expect:
-        sorter.sortAlpha(palavras) == palavras_esperadas
+        when:
+        def palavrasOrdenadas = sorter.sortAlpha(palavras)
+
+        then:
+        palavrasOrdenadas == palavrasEsperadas
 
         where:
-        palavras      || palavras_esperadas
+        palavras      || palavrasEsperadas
         ['b','a','c'] || ['a','b','c']
         ['h','g','f'] || ['f','g','h']
     }
