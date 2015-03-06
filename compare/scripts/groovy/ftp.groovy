@@ -11,10 +11,14 @@ import org.apache.ftpserver.usermanager.impl.WritePermission
 import org.apache.ftpserver.ftplet.Authority
 import org.apache.ftpserver.usermanager.ClearTextPasswordEncryptor
 
+//Servidor FTP
 serverFactory = new FtpServerFactory()
+
+//Configuração
 ConnectionConfigFactory connectionConfigFactory = new ConnectionConfigFactory()
 connectionConfigFactory.setAnonymousLoginEnabled(true)
 
+//Configurações do Usuario
 UserManagerFactory userFactory = new PropertiesUserManagerFactory()
 userFactory.passwordEncryptor = new ClearTextPasswordEncryptor()
 
@@ -27,12 +31,15 @@ user.enabled=true
 user.homeDirectory='/home/joaolourenco/ftp'
 um.save(user)
 
+//configurando porta
 ListenerFactory factory = new ListenerFactory()
 factory.setPort(2221)
+
+//Aplicando configurações
 serverFactory.addListener("default", factory.createListener())
 serverFactory.setConnectionConfig(connectionConfigFactory.createConnectionConfig())
 serverFactory.setUserManager(um)
 
-// start the server
+//Iniciando servidor
 server = serverFactory.createServer();
 server.start()
